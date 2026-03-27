@@ -81,7 +81,7 @@ function doScene1() // chery on top
   background("#f0e2fc");
   fill('black');
   stroke('black');
-  text('click i to change colors!', 10, 420);
+  text('click [ i ] to change colors!', 10, 420);
   
   
   fill('white');
@@ -89,6 +89,7 @@ function doScene1() // chery on top
   //ice cream cone
   triangle(160, 200, 240, 200, 200, 350);
   
+ text('click [2] to add toppings!', 10, 440);
   
  
   // ice cream scoop
@@ -141,16 +142,32 @@ function doScene2() // ice cream
 
 function doScene3() // cold winter for freezeria
 {
-  background("#04517b");
-  translate(width/2, height/2);
   
-  for (let i = 0; i < 200; i++)
-  {
-    
-    rotate(0.1);
-    //stroke("#88d2f2");
-   fill("#abf0ff");
-    ellipse(i + expand, 0 + expand, 10, 10);
-  }
-  expand += 0.2;
+   text('click [ i ] to change background!', 10, 420);
+  background(r,g,b);
+ stroke("white");
+  fill("white");
+  //ice cream cone
+  fill("#CDA26F");
+  triangle(160, 200, 240, 200, 200, 350);
+  
+  
+ 
+  // ice cream scoop
+  fill("#abffe3");
+  circle(200, 150, 100);
+  textSize(50);
+  text(cherry.emoji, cherry.x, cherry.y);
+  textSize(20);
+  text(coconut.emoji, coconut.x, coconut.y);
+  textSize(15);
+  text(banana.emoji, banana.x, banana.y);
+
+  // edge icecream
+  fill("#fefcd0");
+  circle(170, 190, 40);
+  fill("#fabdbd");
+  circle(230, 190, 40);
+ fill("#94654c");
+  circle(195, 190, 40);
 }
