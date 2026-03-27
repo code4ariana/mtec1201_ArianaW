@@ -11,13 +11,25 @@ let cherry =  {
     emoji: '🍒'
   }
 
+let coconut =  {
+    x: 160,
+    y: 160,
+    emoji: '🥥'
+  }
+
+let banana =  {
+    x: 180,
+    y: 120,
+    emoji: '🍌'
+  }
+
 var r = random(0, 180);
 var g = random(0, 300);
 var b = random(0, 200);
 
 
 function draw() {
- textSize(50);
+ //textSize(50);
   background(220);
   
   if (scene != 3)
@@ -108,9 +120,13 @@ function doScene2() // ice cream
   // ice cream scoop
   fill("#abffe3");
   circle(200, 150, 100);
-   text(cherry.emoji, cherry.x, cherry.y);
+  textSize(50);
+  text(cherry.emoji, cherry.x, cherry.y);
+  textSize(20);
+  text(coconut.emoji, coconut.x, coconut.y);
+  textSize(15);
+  text(banana.emoji, banana.x, banana.y);
 
-  
   // edge icecream
   fill("#fefcd0");
   circle(170, 190, 40);
@@ -125,7 +141,7 @@ function doScene2() // ice cream
 
 function doScene3() // cold winter for freezeria
 {
-  background("#white");
+  background("#04517b");
   translate(width/2, height/2);
   
   for (let i = 0; i < 200; i++)
