@@ -6,17 +6,18 @@ function setup() {
 }
 
 let DressUpUI = [{
-  emoji: '👜',
+  emoji: '🛍️',
   active: true,
-  x: 200, 
-  y: 450
+  x: 40, 
+  y: 80
 }, {
   emoji: '💾',
   active: true,
-  x: 300,
-  y: 400
+  x: 120,
+  y: 80
 },];
 
+console.log(DressUpUI);
 
 let DressUpItems = [{
   emoji: '👕',
@@ -41,9 +42,15 @@ let DressUpItems = [{
 }];
 
 
+console.log(DressUpItems);
+
 function draw() {
   background(220);
   playerDressingRoom();
+  textSize(50);
+  text(DressUpUI[0].emoji, DressUpUI[0].x, DressUpUI[0].y);
+  textSize(30);
+  text(DressUpUI[1].emoji, DressUpUI[1].x, DressUpUI[1].y);
 }
 
 
@@ -57,8 +64,17 @@ function playerDressingRoom() {
 
 
 function mouseClicked() {
-  let shirt = DressUpItems[0];
-  let pants = DressUpItems[1];
-  let glasses = DressUpItems[2];
-  let shoes = DressUpItems[3];
+  let shirtBtn = DressUpItems[0];
+  let pantsBtn = DressUpItems[1];
+  let glassesBtn = DressUpItems[2];
+  let shoesBtn = DressUpItems[3];
+  let shopBtn = DressUpUI[0];
+  let saveBtn = DressUpUI[1];
 }
+
+function test() {
+  for (let i = 0; i < 4; i++) {
+   return
+  }
+}
+
